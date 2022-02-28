@@ -8,7 +8,7 @@ public class sceneswitch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        blockAppear.SetActive = false;
+        blockAppear.SetActive(false);
     }
 
     // Update is called once per frame
@@ -19,6 +19,6 @@ public class sceneswitch : MonoBehaviour
 
     void OnTriggerStay (Collider other)
     {
-        blockAppear.SetActive = true;
+        blockAppear.SetActive(true);
     }
 }
