@@ -21,6 +21,9 @@ public class door1 : MonoBehaviour
         {
             ePress = true;
             //Debug.Log(ePress);
+        } else
+        {
+            ePress = false;
         }
 
         /*if (DoorRot.eulerAngles.y >= -90f && DoorRot.eulerAngles.y <= 95f)
@@ -35,7 +38,16 @@ public class door1 : MonoBehaviour
         if(ePress == true)
         {
             //Debug.Log("wahoo");
-            Door.transform.Rotate(moveDirection * 0.01f);
+            //Door.transform.Rotate(moveDirection * 0.01f, Time.deltaTime * 2);
+            StartCoroutine(RotateDoor());
         }
+    }
+    IEnumerator RotateDoor()
+    {
+
+        Door.transform.Rotate(moveDirection * 0.01f);
+        yield return new WaitForSeconds(5);
+        Debug.Log("fuck");
+        ePress = false;
     }
 }
