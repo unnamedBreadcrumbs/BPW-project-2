@@ -5,6 +5,7 @@ using UnityEngine;
 public class sceneswitch : MonoBehaviour
 {
     public GameObject blockAppear;
+    bool eDown;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,11 +15,21 @@ public class sceneswitch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.E))
+        {
+            eDown = true;
+        }
+        else
+        {
+            eDown = false;
+        }
     }
 
     void OnTriggerStay (Collider other)
     {
-        blockAppear.SetActive(true);
+        if (eDown == true)
+        {
+            blockAppear.SetActive(true);
+        }
     }
 }
