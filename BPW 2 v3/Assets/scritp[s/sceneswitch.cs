@@ -11,6 +11,7 @@ public class sceneswitch : MonoBehaviour
     public lampoff lampGoOff;
     public GameObject doorOld;
     public GameObject doorNew;
+    public GameObject AMONGUS;
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +48,7 @@ public class sceneswitch : MonoBehaviour
             lampGoOff.sceneswitchon = true;
             doorOld.SetActive(false);
             doorNew.SetActive(true);
+            AMONGUS.SetActive(true);
         }
     }
 
