@@ -9,6 +9,8 @@ public class sceneswitch : MonoBehaviour
     public bool eDown;
     bool goFlicke;
     public lampoff lampGoOff;
+    public GameObject doorOld;
+    public GameObject doorNew;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +45,8 @@ public class sceneswitch : MonoBehaviour
             goFlicke = true;
             activeLamp.SetActive(true);
             lampGoOff.sceneswitchon = true;
+            doorOld.SetActive(false);
+            doorNew.SetActive(true);
         }
     }
 
@@ -53,7 +57,7 @@ public class sceneswitch : MonoBehaviour
     }
     IEnumerator redflickr()
     {
-        flickerLamp.intensity = 600000;
+        flickerLamp.intensity = 400000;
         yield return new WaitForSeconds(1);
         flickerLamp.intensity = 6000;
         yield return new WaitForSeconds(1);
