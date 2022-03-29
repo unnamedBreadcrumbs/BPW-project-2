@@ -19,6 +19,7 @@ public class lampoff : MonoBehaviour
     public GameObject lampoffPrefab12;
     public GameObject lampoffPrefab13;
     public GameObject lampoffPrefab14;
+    public GameObject lampoffPrefab15;
 
     // Start is called before the first frame update
     void Start()
@@ -64,6 +65,8 @@ public class lampoff : MonoBehaviour
         lampoffPrefab13.SetActive(false);
         yield return new WaitForSeconds(0.5f);
         lampoffPrefab14.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        lampoffPrefab15.SetActive(false);
         yield return new WaitForSeconds(0.5f);
 
     }
