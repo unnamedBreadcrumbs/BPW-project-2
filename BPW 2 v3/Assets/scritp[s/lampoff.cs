@@ -5,6 +5,7 @@ using UnityEngine;
 public class lampoff : MonoBehaviour
 {
     public bool sceneswitchon = false;
+    public GameObject hum;
     public GameObject lampoffPrefab1;
     public GameObject lampoffPrefab2;
     public GameObject lampoffPrefab3;
@@ -68,6 +69,7 @@ public class lampoff : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         lampoffPrefab15.SetActive(false);
         yield return new WaitForSeconds(0.5f);
+        hum.SetActive(false);
 
     }
 }
