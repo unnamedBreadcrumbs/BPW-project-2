@@ -20,11 +20,13 @@ public class sceneswitch : MonoBehaviour
     public bool overrideChrom = true;
     public AudioSource emergency;
     public AudioSource flikkerSound;
+    public Animator Lever;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        Lever.GetComponent<Animator>();
         /*VolumeProfile posprofile = postPros.profile;
         if (!posprofile.TryGet<ChromaticAberration>(out var Chrom))
         {
@@ -63,6 +65,7 @@ public class sceneswitch : MonoBehaviour
 
         if (eDown == true && ePressed != true)
         {
+            Lever.SetTrigger("Trigger");
             goFlicke = true;
             activeLamp.intensity = 60000;
             lampGoOff.sceneswitchon = true;

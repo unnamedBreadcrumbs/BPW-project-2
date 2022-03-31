@@ -8,6 +8,7 @@ public class dooranim : MonoBehaviour
     bool ePress = false;
     public bool Collided;
     public AudioSource Creaky;
+    public GameEnder GameEnd;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +36,7 @@ public class dooranim : MonoBehaviour
             Debug.Log("fuck");
             Door.SetTrigger("activate");
             Creaky.Play();
+            GameEnd.GameEnd = true;
         }
     }
 }
